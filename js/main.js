@@ -1,27 +1,31 @@
 import translations from './translations.js';
 
-const themeThoggle = document.getElementById('theme-toggle');
 const langButton = document.getElementById('lang-switch');
+const themeToggle = document.getElementById('theme-toggle');
 const body = document.body;
 
 let currentLang = 'es';
 
+// --- Lógica de Idioma ---
 langButton.addEventListener('click', () => {
-    //cambiamos el idioma
+    // 1. Cambiamos el idioma actual
     currentLang = currentLang === 'es' ? 'en' : 'es';
-
-    //buscamoas todos los elementos en el atributo data-i18n
-    document.querySelectorAll('[data-i18n}').forEach(element => {
+    
+    // 2. Buscamos todos los elementos que tengan data-i18n
+    document.querySelectorAll('[data-i18n]').forEach(element => {
         const key = element.getAttribute('data-i18n');
-        if (translations[currentLang][key]) {
+        
+        // 3. Verificamos que la traducción exista en translations.js
+        if (translations[currentLang] && translations[currentLang][key]) {
             element.textContent = translations[currentLang][key];
         }
     });
 
+    console.log(`Idioma cambiado a: ${currentLang}`);
 });
 
-//logica de modo oscuro
-themeThoggle.addEventListener('click', () => {
+// --- Lógica de Modo Oscuro ---
+themeToggle.addEventListener('click', () => {
     const currentTheme = body.getAttribute('data-theme');
     const newTheme = currentTheme === 'light' ? 'dark' : 'light';
     body.setAttribute('data-theme', newTheme);

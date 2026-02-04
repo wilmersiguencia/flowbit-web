@@ -8,21 +8,57 @@
 </head>
 <body data-theme="light">
 
-    <nav class="container">
-        <div class="logo">FlowBit</div>
-        <div class="controls">
-            <button id="lang-switch">EN / ES</button>
-            <button id="theme-toggle">🌓</button>
+    <nav>
+        <div class="nav-content container">
+            <div class="logo">FlowBit</div>
+            <div class="controls">
+                <button id="lang-switch" class="btn-secondary">EN / ES</button>
+                <button id="theme-toggle" class="btn-icon">🌓</button>
+            </div>
         </div>
     </nav>
 
-    <main class="container">
-        <section id="hero">
-            <h1 data-i18n="hero-title">Automatización sin errores humanos.</h1>
-            <p data-i18n="hero-subtitle">Optimizamos tus procesos para que te enfoques en crecer.</p>
-            <button class="btn-primary" data-i18n="btn-contact">Contactar por WhatsApp</button>
+    <main>
+        <section id="hero" class="hero-section">
+            <div class="container hero-content">
+                <span class="badge" data-i18n="badge-new">NUEVO: Sistemas IA 2026</span>
+                <h1 data-i18n="hero-title">Automatización sin errores humanos.</h1>
+                <p data-i18n="hero-subtitle">Optimizamos tus procesos para que te enfoques en crecer.</p>
+
+                <div class="hero-cta">
+                    <a href="https://wa.me/593998931349?text=Hello%20FlowBit,%20I%20want%20to%20automate%20my%20business"
+                    class="btn-primary"
+                    data-i18n="btn-contact"
+                    target="_blank">
+                    Contactar por WhatsApp
+                </a>
+                    <a href="#services" class="btn-link" data-i18n="link-more">Saber más →</a>
+                </div>
+            </div>
         </section>
-    </main>
+
+        <section id="services" class="container">
+            <div class="services-grid">
+                <div class="card">
+                    <div class="card-icon">⚙️</div>
+                    <h3 data-i18n="service-1-title">Automatización de Procesos</h3>
+                    <p data-i18n="service-1-desc">Eliminamos tareas repetitivas para reducir el error humano al 0%.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">📊</div>
+                    <h3 data-i18n="service-2-title">Optimización de Datos</h3>
+                    <p data-i18n="service-2-desc">Sistemas que organizan tu información de forma automática.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🚀</div>
+                    <h3 data-i18n="service-3-title">Escalabilidad Tech</h3>
+                    <p data-i18n="service-3-desc">Preparamos tu arquitectura para crecer sin necesidad de más personal.</p>
+                </div>
+            </div>
+        </section>
+    </main> 
 
     <script type="module" src="js/main.js"></script>
 </body>
