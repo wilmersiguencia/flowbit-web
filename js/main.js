@@ -31,3 +31,18 @@ themeToggle.addEventListener('click', () => {
     body.setAttribute('data-theme', newTheme);
 });
 
+// Función para animar al hacer scroll
+const reveal = () => {
+    const reveals = document.querySelectorAll(".reveal");
+    reveals.forEach(window_el => {
+        const windowHeight = window.innerHeight;
+        const revealTop = window_el.getBoundingClientRect().top;
+        if (revealTop < windowHeight - 150) {
+            window_el.classList.add("active");
+        }
+    });
+};
+
+window.addEventListener("scroll", reveal);
+// Ejecutar una vez al cargar por si ya hay elementos visibles
+reveal();
