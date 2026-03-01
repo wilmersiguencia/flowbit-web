@@ -4,23 +4,23 @@ const langButton = document.getElementById('lang-switch');
 const themeToggle = document.getElementById('theme-toggle');
 const body = document.body;
 
-let currentLang = 'es';
+//cargamos el idioma guardado pro defecto 
+let currentLang = localStorage.getItem('preferredLang') || 'en';
+
+const applyTranslations = (lang) => {
+    document.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        if (translations[lang] && translations[lang][key]) {
+            element.innerHTML = translations[lang][key];
+        }
+    });
+    localStorage.setItem('preferredLang', lang);
+};
 
 // --- Lógica de Idioma ---
 langButton.addEventListener('click', () => {
-    // 1. Cambiamos el idioma actual
     currentLang = currentLang === 'es' ? 'en' : 'es';
-    
-    // 2. Buscamos todos los elementos que tengan data-i18n
-    document.querySelectorAll('[data-i18n]').forEach(element => {
-        const key = element.getAttribute('data-i18n');
-        
-        // 3. Verificamos que la traducción exista en translations.js
-        if (translations[currentLang] && translations[currentLang][key]) {
-            element.textContent = translations[currentLang][key];
-        }
-    });
-
+    applyTranslations(currentLang);
     console.log(`Idioma cambiado a: ${currentLang}`);
 });
 
@@ -29,6 +29,16 @@ themeToggle.addEventListener('click', () => {
     const currentTheme = body.getAttribute('data-theme');
     const newTheme = currentTheme === 'light' ? 'dark' : 'light';
     body.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+});
+
+//al cargar la pagina
+window.addEventListener('DOMContentLoaded', () => {
+    applyTranslations(currentLang);
+
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    body.setAttribute('data-theme', savedTheme);
+    reveal();
 });
 
 // Función para animar al hacer scroll
@@ -44,5 +54,3 @@ const reveal = () => {
 };
 
 window.addEventListener("scroll", reveal);
-// Ejecutar una vez al cargar por si ya hay elementos visibles
-reveal();
