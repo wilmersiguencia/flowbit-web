@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FlowBit | Atomatización Inteligente</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body data-theme="light">
@@ -22,7 +23,9 @@
         <section id="hero" class="hero-section">
             <div class="container hero-content">
                 <span class="badge" data-i18n="badge-new"></span>
+                
                 <h1 data-i18n="hero-title"></h1>
+                
                 <p data-i18n="hero-subtitle"></p>
 
                 <div class="hero-cta">
@@ -38,13 +41,20 @@
             </div>
 
             <div class="services-grid">
-                <div class="card problem-card"><p data-i18n="problem-1"></p></div>
-                <div class="card problem-card"><p data-i18n="problem-2"></p></div>
-                <div class="card problem-card"><p data-i18n="problem-3"></p></div>
+                <div class="card problem-card">
+                    <p><span>⚠️</span> <span data-i18n="problem-1"></span></p>
+                </div>
+                <div class="card problem-card">
+                    <p><span>⚠️</span> <span data-i18n="problem-2"></span></p>
+                </div>
+                <div class="card problem-card">
+                    <p><span>⚠️</span> <span data-i18n="problem-3"></span></p>
+                </div>
             </div>
 
             <div class="solution-callout">
                 <h3 data-i18n="solution-text"></h3>
+                <p class="callout-subtitle" data-i18n="solution-subtext"></p>
             </div>
 
         </section>
@@ -108,6 +118,37 @@
             </div>
         </section>
 
+        <section id="tech-stack" class="container reveal">
+            <div class="section-header">
+                <span class="badge" data-i18n="tech-badge"></span>
+                <h2 data-i18n="tech-title"></h2>
+                <p class="section-subtitle" data-i18n="tech-subtitle"></p>
+            </div>
+
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <span class="tech-icon">🐍</span>
+                    <h3>Python</h3>
+                    <p data-i18n="tech-python"></p>
+                </div>
+                <div class="tech-item">
+                    <span class="tech-icon">🌐</span>
+                    <h3>JavaScript</h3>
+                    <p data-i18n="tech-js"></p>
+                </div>
+                <div class="tech-item">
+                    <span class="tech-icon">🗄️</span>
+                    <h3>SQL & Databases</h3>
+                    <p data-i18n="tech-sql"></p>
+                </div>
+                <div class="tech-item">
+                    <span class="tech-icon">📊</span>
+                    <h3>Data Analysis</h3>
+                    <p data-i18n="tech-analysis"></p>
+                </div>
+            </div>
+        </section>
+
         <section id="real-example" class="container reveal">
             <div class="section-header">
                 <span class="badge badge-success" data-i18n="badge-success"></span>
@@ -117,7 +158,11 @@
 
             <div class="mockup-stripe">
                 <div class="window-content">
-                    <img src="assets/images/dashboard-agua.png" alt="Sistema de Gestión de Agua">
+                    <img src="assets/images/dashboard-agua.png" 
+                    alt="Sistema de Gestión de Agua" 
+                    loading="lazy"
+                    width="950"
+                    height="600">
                 </div>
             </div>
 
@@ -148,7 +193,31 @@
             </div>
         </section>
         
-    </main> <footer>
+    </main> 
+
+    <section id="faq" class="container reveal">
+        <div class="section-header">
+            <h2 data-i18n="faq-title"></h2>
+            <p clas="section-subtitle" data-i18n="faq-subtitle"></p>
+        </div>
+
+        <div class="faq-grid">
+            <div class="faq-item">
+                <h3 data-i18n="faq-1-q"></h3>
+                <p data-i18n="faq-1-a"></p>
+            </div>
+            <div class="faq-item">
+                <h3 data-i18n="faq-2-q"></h3>
+                <p data-i18n="faq-2-a"></p>
+            </div>
+            <div class="faq-item">
+                <h3 data-i18n="faq-3-q"></h3>
+                <p data-i18n="faq-3-a"></p>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
         <div class="container footer-content">
             <div class="footer-brand">
                 <div class="logo">FlowBit</div>
@@ -157,11 +226,14 @@
             <div class="footer-links">
                 <a href="#services" data-i18n="nav-features"></a>
                 <a href="#process" data-i18n="process-title"></a>
-                <a href="https://github.com/wilmersiguencia" target="_black">GitHub</a>
+                <a href="https://github.com/wilmersiguencia" target="_blank">GitHub</a>
             </div>
         </div>
     </footer>
 
     <script type="module" src="js/main.js"></script>
+    <a href="https://wa.me/593998931349" class="whatsapp-float" target="-blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 </body>
 </html>
