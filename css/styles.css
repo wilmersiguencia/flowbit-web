@@ -775,4 +775,55 @@ img {
     .faq-item h3 {
         font-size: 1.1 rem;
     }
+
+    .container {
+        padding: 0 25px !important;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .step-number {
+        font-size: 3.5rem !important;
+        left: 0 !important;
+        top: -25px !important;
+        opacity: 0.08 !important;
+    }
+
+    h2, .section-header h2 {
+        font-size: 1.8rem !important;
+        line-height: 1.2;
+        text-align: left;
+    }
+
+    .faq-item {
+        padding: 25px 0 !important;
+    }
+
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px;
+        padding: 0 10px;
+    }
+
+    .card {
+        padding: 2rem 1.5rem !important;
+        height: auto !important;
+    }
+
+    .card h3 {
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+    }
+
+    .card p {
+        font-size: 1rem;
+        line-height: 1.4;
+    }
 }
