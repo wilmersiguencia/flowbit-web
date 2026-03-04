@@ -2,21 +2,14 @@ const translations = {
     "es": {
 /* NAVEGACIÓN Y GENERAL */
         "nav-features": "Soluciones",
-        "btn-contact": "Solicitar diagnóstico",
+        "btn-contact": "Solicitar análisis gratuito",
         "link-more": "Ver cómo lo hacemos →",
         "badge-new": "Sistemas Inteligentes 2026",
-        "badge-success": "CASO DE ÉXITO",
+        "badge-success": "PROYECTO DEMOSTRATIVO",
 
         /* HERO: El gancho principal */
-        "hero-title": "Sistemas inteligentes que automatizan tu negocio",
-        "hero-subtitle": "Deja atrás las tareas manuales, los errores y el trabajo repetitivo. Diseñamos soluciones que te dan más eficiencia y libertad para crecer.",
-
-        /* SECCIÓN PROBLEMA: Agitando el dolor */
-        "problem-title": "¿Tu negocio está frenado por procesos manuales?",
-        "problem-1": "❌ Pierdes horas en registros y Excel complicados.",
-        "problem-2": "❌ Los errores de datos te cuestan dinero hoy.",
-        "problem-3": "❌ Tu crecimiento depende de tareas repetitivas.",
-        "solution-text": "Transformamos tu desorden operativo en un sistema autónomo.",
+        "hero-title": "Eliminamos el trabajo manual de tu negocio — de forma permanente.",
+        "hero-subtitle": "Diseñamos sistemas inteligentes que automatizan tus procesos, reducen errores y te devuelven tiempo para crecer estratégicamente.",
 
         /* SERVICIOS: Beneficios reales */
         "service-1-title": "Automatización Total",
@@ -39,8 +32,8 @@ const translations = {
         "step-4-desc": "Lanzamos y capacitamos a tu equipo para asegurar el éxito del sistema.",
 
         /* CASO DE ÉXITO */
-        "showcase-title": "Impacto Real: Gestión de Suministros",
-        "showcase-desc": "Control total de clientes, consumos y cobranzas en un sistema centralizado diseñado a medida.",
+        "showcase-title": "Sistema de Gestión Automatizado (Demo Real)",
+        "showcase-desc": "Prototipo funcional diseñado para demostrar automatización de clientes, consumos y control financiero en un sistema centralizado.",
         "check-1-title": "Control Centralizado",
         "check-1-desc": "Visibilidad total del estado del negocio.",
         "check-2-title": "Cero Errores",
@@ -81,21 +74,14 @@ const translations = {
 "en": {
         /* NAVIGATION & GENERAL */
         "nav-features": "Solutions",
-        "btn-contact": "Request Diagnostic",
+        "btn-contact": "Get Free Process Analysis",
         "link-more": "See how we do it →",
         "badge-new": "Smart Systems 2026",
-        "badge-success": "SUCCESS CASE",
+        "badge-success": "DEMONSTRATION PROJECT",
 
         /* HERO */
-        "hero-title": "Smart systems that automate your business",
-        "hero-subtitle": "Leave behind manual tasks, errors, and repetitive work. We design solutions that give you more efficiency and freedom to grow.",
-
-        /* PROBLEM SECTION */
-        "problem-title": "Is your business slowed down by manual processes?",
-        "problem-1": "❌ Wasting hours on complex spreadsheets.",
-        "problem-2": "❌ Data errors are costing you money today.",
-        "problem-3": "❌ Your growth is held back by repetitive tasks.",
-        "solution-text": "We turn your operational chaos into an autonomous system.",
+        "hero-title": "We eliminate manual work from your business — permanently.",
+        "hero-subtitle": "We design intelligent systems that automate your processes, reduce errors, and give you back time to scale strategically.",
 
         /* SERVICES */
         "service-1-title": "Full Automation",
@@ -118,8 +104,8 @@ const translations = {
         "step-4-desc": "We launch and train your team to ensure system success.",
 
         /* SUCCESS CASE */
-        "showcase-title": "Real Impact: Supply Management",
-        "showcase-desc": "Total control of customers, consumption, and billing in a custom-designed centralized system.",
+        "showcase-title": "Automated Management System (Real Demo)",
+        "showcase-desc": "Functional prototype designed to demonstrate automation of clients, consumption tracking, and financial control in a centralized system.",
         "check-1-title": "Centralized Control",
         "check-1-desc": "Total visibility of business status.",
         "check-2-title": "Zero Errors",
