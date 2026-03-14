@@ -17,40 +17,45 @@ const applyTranslations = (lang) => {
     localStorage.setItem('preferredLang', lang);
 };
 
-// --- Lógica de Idioma ---
-langButton.addEventListener('click', () => {
-    currentLang = currentLang === 'es' ? 'en' : 'es';
-    applyTranslations(currentLang);
-    console.log(`Idioma cambiado a: ${currentLang}`);
-});
+if (langButton) {
+    langButton.addEventListener('click', () => {
+        currentLang = currentLang === 'es' ? 'en' : 'es';
+        applyTranslations(currentLang);
+    });
+}
 
-// --- Lógica de Modo Oscuro ---
-themeToggle.addEventListener('click', () => {
-    const currentTheme = body.getAttribute('data-theme');
-    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-    body.setAttribute('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme);
-});
-
-//al cargar la pagina
-window.addEventListener('DOMContentLoaded', () => {
-    applyTranslations(currentLang);
-
-    const savedTheme = localStorage.getItem('theme') || 'light';
-    body.setAttribute('data-theme', savedTheme);
-    reveal();
-});
+if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+        const currentTheme = body.getAttribute('data-theme');
+        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+    
+        body.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+    });
+}
 
 // Función para animar al hacer scroll
 const reveal = () => {
-    const reveals = document.querySelectorAll(".reveal");
-    reveals.forEach(window_el => {
+    const elements = document.querySelectorAll(".reveal");
+
+    elements.forEach(window_el => {
+        const elementTop = window_el.getBoundingClientRect().top;
         const windowHeight = window.innerHeight;
-        const revealTop = window_el.getBoundingClientRect().top;
-        if (revealTop < windowHeight - 150) {
+        
+        if (elementTop < windowHeight - 100 && !window_el.classList.contains("active")) {
             window_el.classList.add("active");
         }
     });
 };
 
 window.addEventListener("scroll", reveal);
+
+window.addEventListener('DOMContentLoaded', () => {
+
+    applyTranslations(currentLang);
+
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    body.setAttribute('data-theme', savedTheme);
+
+    reveal();
+})
