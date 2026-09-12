@@ -1,670 +1,524 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>FlowBit | Sistemas y automatización para negocios</title>
     <meta
-        name="description"
-        content="FlowBit crea sistemas, automatizaciones y soluciones digitales para ayudar a los negocios a trabajar mejor."
-    >
+      name="description"
+      content="FlowBit crea sistemas, automatizaciones y soluciones digitales para ayudar a los negocios a trabajar mejor."
+    />
 
-    <link rel="stylesheet" href="css/styles.css">
-</head>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
 
-<body>
-
+  <body>
     <!-- NAVBAR -->
     <header class="navbar">
-        <div class="container navbar-content">
+      <div class="container navbar-content">
+        <a href="#" class="logo"> FlowBit </a>
 
-            <a href="#" class="logo">
-                FlowBit
-            </a>
+        <nav class="nav-links">
+          <a href="#services">Servicios</a>
 
-            <nav class="nav-links">
-                <a href="#services">Servicios</a>
-                <a href="#process">Proceso</a>
-                <a href="#projects">Proyectos</a>
-                <a href="#about">FlowBit</a>
-            </nav>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown-toggle" type="button">
+              Soluciones
+              <span aria-hidden="true">⌄</span>
+            </button>
 
-            <a
-                href="https://wa.me/593998931349?text=Hola%20FlowBit,%20quiero%20hablar%20sobre%20un%20proyecto"
-                class="nav-cta"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                Hablemos
-            </a>
+            <div class="nav-dropdown-menu">
+              <a href="servicios/sistemas.html">Sistemas empresariales</a>
+              <a href="servicios/automatizacion.html">Automatización</a>
+              <a href="servicios/ia.html">IA aplicada</a>
+              <a href="servicios/datos-backend.html">Datos &amp; Backend</a>
+            </div>
+          </div>
 
-        </div>
+          <a href="#projects">Proyectos</a>
+          <a href="#process">Proceso</a>
+          <a href="#about">Nosotros</a>
+        </nav>
+
+        <a
+          href="https://wa.me/593998931349?text=Hola%20FlowBit,%20quiero%20hablar%20sobre%20un%20proyecto"
+          class="nav-cta"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Hablemos
+        </a>
+      </div>
     </header>
 
-
     <main>
+      <!-- HERO -->
+      <section class="hero">
+        <div class="container hero-content">
+          <span class="eyebrow"> Sistemas · Automatización · IA · Datos </span>
 
-        <!-- HERO -->
-        <section class="hero">
+          <h1>
+            Automatiza lo que está
+            <span>frenando tu negocio.</span>
+          </h1>
 
-            <div class="container hero-content">
+          <p class="hero-description">
+            Construimos sistemas, automatizaciones y herramientas digitales que
+            eliminan trabajo manual, organizan tus procesos y ayudan a tu
+            negocio a crecer.
+          </p>
 
-                <span class="eyebrow">
-                    Sistemas · Automatización · IA · Datos
-                </span>
+          <div class="hero-actions">
+            <a
+              href="https://wa.me/593998931349?text=Hola%20FlowBit,%20quiero%20hablar%20sobre%20un%20proyecto"
+              class="btn-primary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Cuéntame tu proyecto
+            </a>
 
-                <h1>
-                    Automatiza lo que está
-                    <span>frenando tu negocio.</span>
-                </h1>
+            <a href="#projects" class="btn-secondary"> Ver proyectos </a>
+          </div>
 
-                <p class="hero-description">
-                    Construimos sistemas, automatizaciones y herramientas
-                    digitales que eliminan trabajo manual, organizan tus
-                    procesos y ayudan a tu negocio a crecer.
+          <div class="hero-proof">
+            <span>Python</span>
+            <span>FastAPI</span>
+            <span>PostgreSQL</span>
+            <span>Docker</span>
+            <span>AI</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROBLEMS -->
+      <section class="section problems" id="problems">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow"> El problema </span>
+
+            <h2>
+              Tu negocio no debería perder tiempo haciendo trabajo que una
+              máquina puede hacer.
+            </h2>
+
+            <p>
+              Muchos negocios todavía dependen de procesos manuales, archivos
+              dispersos y tareas repetitivas. Ahí es donde podemos intervenir.
+            </p>
+          </div>
+
+          <div class="problem-grid">
+            <article class="problem-card">
+              <span class="problem-number">01</span>
+
+              <h3>Demasiado trabajo manual</h3>
+
+              <p>
+                Copiar datos, preparar reportes, organizar información o repetir
+                las mismas tareas cada día.
+              </p>
+            </article>
+
+            <article class="problem-card">
+              <span class="problem-number">02</span>
+
+              <h3>Información desordenada</h3>
+
+              <p>
+                Excel, documentos y datos repartidos en distintos lugares
+                dificultan saber qué está pasando.
+              </p>
+            </article>
+
+            <article class="problem-card">
+              <span class="problem-number">03</span>
+
+              <h3>Sistemas que no se adaptan</h3>
+
+              <p>
+                Herramientas genéricas que no encajan con la forma real en la
+                que trabaja tu negocio.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- SOLUTIONS -->
+      <section class="section solutions" id="services">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow"> Lo que hacemos </span>
+
+            <h2>Tecnología aplicada a problemas reales.</h2>
+
+            <p>
+              No se trata de usar tecnología por usarla. Diseñamos soluciones
+              alrededor de lo que tu negocio realmente necesita.
+            </p>
+          </div>
+
+          <div class="services-grid">
+            <article class="service-card">
+              <span class="service-index">01</span>
+
+              <h3>Sistemas empresariales</h3>
+
+              <p>
+                Sistemas internos para gestionar ventas, inventario, clientes,
+                gastos, operaciones y procesos específicos.
+              </p>
+
+              <div class="service-tags">
+                <span>ERP</span>
+                <span>Dashboards</span>
+                <span>Gestión</span>
+              </div>
+            </article>
+
+            <article class="service-card">
+              <span class="service-index">02</span>
+
+              <h3>Automatización</h3>
+
+              <p>
+                Automatizamos tareas repetitivas, procesamiento de archivos,
+                reportes, flujos administrativos e integraciones.
+              </p>
+
+              <div class="service-tags">
+                <span>Python</span>
+                <span>Workflows</span>
+                <span>APIs</span>
+              </div>
+            </article>
+
+            <article class="service-card">
+              <span class="service-index">03</span>
+
+              <h3>IA aplicada</h3>
+
+              <p>
+                Integramos inteligencia artificial donde realmente aporta valor:
+                asistentes, extracción, clasificación, automatización y agentes.
+              </p>
+
+              <div class="service-tags">
+                <span>LLM</span>
+                <span>Agents</span>
+                <span>Automation</span>
+              </div>
+            </article>
+
+            <article class="service-card">
+              <span class="service-index">04</span>
+
+              <h3>Datos y backend</h3>
+
+              <p>
+                Construimos APIs, bases de datos y herramientas para procesar,
+                organizar y convertir datos en información útil.
+              </p>
+
+              <div class="service-tags">
+                <span>FastAPI</span>
+                <span>PostgreSQL</span>
+                <span>Data</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROCESS -->
+      <section class="section process" id="process">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow"> Cómo trabajamos </span>
+
+            <h2>Del problema a una solución funcionando.</h2>
+          </div>
+
+          <div class="process-grid">
+            <article class="process-step">
+              <span>01</span>
+
+              <h3>Descubrimos</h3>
+
+              <p>
+                Entendemos tu negocio, el problema y qué proceso queremos
+                mejorar.
+              </p>
+            </article>
+
+            <article class="process-step">
+              <span>02</span>
+
+              <h3>Diseñamos</h3>
+
+              <p>
+                Definimos la solución, alcance, tecnología y prioridades antes
+                de construir.
+              </p>
+            </article>
+
+            <article class="process-step">
+              <span>03</span>
+
+              <h3>Construimos</h3>
+
+              <p>
+                Desarrollamos el sistema, automatización o integración de forma
+                iterativa.
+              </p>
+            </article>
+
+            <article class="process-step">
+              <span>04</span>
+
+              <h3>Implementamos</h3>
+
+              <p>
+                Ponemos la solución en funcionamiento y dejamos una base
+                preparada para evolucionar.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section class="section projects" id="projects">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow"> Proyectos </span>
+
+            <h2>Construimos soluciones, no solo demos.</h2>
+
+            <p>
+              Estos proyectos representan problemas reales que hemos trabajado y
+              la tecnología utilizada para resolverlos.
+            </p>
+          </div>
+
+          <div class="projects-grid">
+            <article class="project-card featured">
+              <div class="project-content">
+                <span class="project-label"> Sistema empresarial </span>
+
+                <h3>FlowBit ERP</h3>
+
+                <p>
+                  Sistema de gestión empresarial diseñado para centralizar
+                  ventas, inventario, gastos, información financiera y
+                  operaciones de un negocio.
                 </p>
 
-                <div class="hero-actions">
-
-                    <a
-                        href="https://wa.me/593998931349?text=Hola%20FlowBit,%20quiero%20hablar%20sobre%20un%20proyecto"
-                        class="btn-primary"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Cuéntame tu proyecto
-                    </a>
-
-                    <a href="#projects" class="btn-secondary">
-                        Ver proyectos
-                    </a>
-
+                <div class="project-tags">
+                  <span>FastAPI</span>
+                  <span>PostgreSQL</span>
+                  <span>Redis</span>
+                  <span>Docker</span>
                 </div>
 
-                <div class="hero-proof">
-                    <span>Python</span>
-                    <span>FastAPI</span>
-                    <span>PostgreSQL</span>
-                    <span>Docker</span>
-                    <span>AI</span>
+                <a href="proyectos/flowbit-erp.html" class="project-link">
+                  Ver caso de estudio →
+                </a>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-content">
+                <span class="project-label"> Automatización </span>
+
+                <h3>FlowBit Lead Engine</h3>
+
+                <p>
+                  Herramienta para investigar negocios, recopilar información
+                  pública y organizar oportunidades comerciales.
+                </p>
+
+                <div class="project-tags">
+                  <span>Python</span>
+                  <span>Playwright</span>
+                  <span>Automation</span>
                 </div>
 
-            </div>
+                <a href="proyectos/lead-engine.html" class="project-link">
+                  Ver caso de estudio →
+                </a>
+              </div>
+            </article>
 
-        </section>
+            <article class="project-card">
+              <div class="project-content">
+                <span class="project-label"> Gestión </span>
 
+                <h3>WaterFlow</h3>
 
-        <!-- PROBLEMS -->
-        <section class="section problems" id="problems">
+                <p>
+                  Sistema de gestión y control de agua desarrollado para
+                  organizar información, operaciones y procesos de una
+                  organización de servicios.
+                </p>
 
-            <div class="container">
-
-                <div class="section-heading">
-
-                    <span class="eyebrow">
-                        El problema
-                    </span>
-
-                    <h2>
-                        Tu negocio no debería perder
-                        tiempo haciendo trabajo que
-                        una máquina puede hacer.
-                    </h2>
-
-                    <p>
-                        Muchos negocios todavía dependen de procesos
-                        manuales, archivos dispersos y tareas repetitivas.
-                        Ahí es donde podemos intervenir.
-                    </p>
-
+                <div class="project-tags">
+                  <span>Python</span>
+                  <span>Database</span>
+                  <span>Web</span>
                 </div>
 
+                <a href="proyectos/waterflow.html" class="project-link">
+                  Ver caso de estudio →
+                </a>
+              </div>
+            </article>
 
-                <div class="problem-grid">
+            <article class="project-card">
+              <div>
+                <h3>Adaptive Brain</h3>
 
-                    <article class="problem-card">
-                        <span class="problem-number">01</span>
+                <p>
+                  Sistema inteligente de asistencia y automatización diseñado
+                  para organizar información y facilitar diferentes procesos
+                  digitales.
+                </p>
 
-                        <h3>
-                            Demasiado trabajo manual
-                        </h3>
-
-                        <p>
-                            Copiar datos, preparar reportes, organizar
-                            información o repetir las mismas tareas cada día.
-                        </p>
-                    </article>
-
-
-                    <article class="problem-card">
-                        <span class="problem-number">02</span>
-
-                        <h3>
-                            Información desordenada
-                        </h3>
-
-                        <p>
-                            Excel, documentos y datos repartidos en distintos
-                            lugares dificultan saber qué está pasando.
-                        </p>
-                    </article>
-
-
-                    <article class="problem-card">
-                        <span class="problem-number">03</span>
-
-                        <h3>
-                            Sistemas que no se adaptan
-                        </h3>
-
-                        <p>
-                            Herramientas genéricas que no encajan con la forma
-                            real en la que trabaja tu negocio.
-                        </p>
-                    </article>
-
+                <div class="project-tags">
+                  <span>Python</span>
+                  <span>AI</span>
+                  <span>Automation</span>
                 </div>
 
-            </div>
-
-        </section>
-
-
-        <!-- SOLUTIONS -->
-        <section class="section solutions" id="services">
-
-            <div class="container">
-
-                <div class="section-heading">
-
-                    <span class="eyebrow">
-                        Lo que hacemos
-                    </span>
-
-                    <h2>
-                        Tecnología aplicada a
-                        problemas reales.
-                    </h2>
-
-                    <p>
-                        No se trata de usar tecnología por usarla.
-                        Diseñamos soluciones alrededor de lo que tu negocio
-                        realmente necesita.
-                    </p>
-
-                </div>
-
-
-                <div class="services-grid">
-
-                    <article class="service-card">
-
-                        <span class="service-index">01</span>
-
-                        <h3>
-                            Sistemas empresariales
-                        </h3>
-
-                        <p>
-                            Sistemas internos para gestionar ventas,
-                            inventario, clientes, gastos, operaciones y
-                            procesos específicos.
-                        </p>
-
-                        <div class="service-tags">
-                            <span>ERP</span>
-                            <span>Dashboards</span>
-                            <span>Gestión</span>
-                        </div>
-
-                    </article>
-
-
-                    <article class="service-card">
-
-                        <span class="service-index">02</span>
-
-                        <h3>
-                            Automatización
-                        </h3>
-
-                        <p>
-                            Automatizamos tareas repetitivas, procesamiento
-                            de archivos, reportes, flujos administrativos
-                            e integraciones.
-                        </p>
-
-                        <div class="service-tags">
-                            <span>Python</span>
-                            <span>Workflows</span>
-                            <span>APIs</span>
-                        </div>
-
-                    </article>
-
-
-                    <article class="service-card">
-
-                        <span class="service-index">03</span>
-
-                        <h3>
-                            IA aplicada
-                        </h3>
-
-                        <p>
-                            Integramos inteligencia artificial donde realmente
-                            aporta valor: asistentes, extracción, clasificación,
-                            automatización y agentes.
-                        </p>
-
-                        <div class="service-tags">
-                            <span>LLM</span>
-                            <span>Agents</span>
-                            <span>Automation</span>
-                        </div>
-
-                    </article>
-
-
-                    <article class="service-card">
-
-                        <span class="service-index">04</span>
-
-                        <h3>
-                            Datos y backend
-                        </h3>
-
-                        <p>
-                            Construimos APIs, bases de datos y herramientas
-                            para procesar, organizar y convertir datos en
-                            información útil.
-                        </p>
-
-                        <div class="service-tags">
-                            <span>FastAPI</span>
-                            <span>PostgreSQL</span>
-                            <span>Data</span>
-                        </div>
-
-                    </article>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- PROCESS -->
-        <section class="section process" id="process">
-
-            <div class="container">
-
-                <div class="section-heading">
-
-                    <span class="eyebrow">
-                        Cómo trabajamos
-                    </span>
-
-                    <h2>
-                        Del problema a una
-                        solución funcionando.
-                    </h2>
-
-                </div>
-
-
-                <div class="process-grid">
-
-                    <article class="process-step">
-                        <span>01</span>
-
-                        <h3>
-                            Descubrimos
-                        </h3>
-
-                        <p>
-                            Entendemos tu negocio, el problema y qué proceso
-                            queremos mejorar.
-                        </p>
-                    </article>
-
-
-                    <article class="process-step">
-                        <span>02</span>
-
-                        <h3>
-                            Diseñamos
-                        </h3>
-
-                        <p>
-                            Definimos la solución, alcance, tecnología y
-                            prioridades antes de construir.
-                        </p>
-                    </article>
-
-
-                    <article class="process-step">
-                        <span>03</span>
-
-                        <h3>
-                            Construimos
-                        </h3>
-
-                        <p>
-                            Desarrollamos el sistema, automatización o
-                            integración de forma iterativa.
-                        </p>
-                    </article>
-
-
-                    <article class="process-step">
-                        <span>04</span>
-
-                        <h3>
-                            Implementamos
-                        </h3>
-
-                        <p>
-                            Ponemos la solución en funcionamiento y dejamos
-                            una base preparada para evolucionar.
-                        </p>
-                    </article>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- PROJECTS -->
-        <section class="section projects" id="projects">
-
-            <div class="container">
-
-                <div class="section-heading">
-
-                    <span class="eyebrow">
-                        Proyectos
-                    </span>
-
-                    <h2>
-                        Construimos soluciones,
-                        no solo demos.
-                    </h2>
-
-                    <p>
-                        Estos proyectos representan problemas reales que
-                        hemos trabajado y la tecnología utilizada para
-                        resolverlos.
-                    </p>
-
-                </div>
-
-
-                <div class="projects-grid">
-
-                    <article class="project-card featured">
-
-                        <div class="project-content">
-
-                            <span class="project-label">
-                                Sistema empresarial
-                            </span>
-
-                            <h3>
-                                FlowBit ERP
-                            </h3>
-
-                            <p>
-                                Sistema de gestión empresarial diseñado para
-                                centralizar ventas, inventario, gastos,
-                                información financiera y operaciones de un
-                                negocio.
-                            </p>
-
-                            <div class="project-tags">
-                                <span>FastAPI</span>
-                                <span>PostgreSQL</span>
-                                <span>Redis</span>
-                                <span>Docker</span>
-                            </div>
-
-                        </div>
-
-                    </article>
-
-
-                    <article class="project-card">
-
-                        <div class="project-content">
-
-                            <span class="project-label">
-                                Automatización
-                            </span>
-
-                            <h3>
-                                FlowBit Lead Engine
-                            </h3>
-
-                            <p>
-                                Herramienta para investigar negocios,
-                                recopilar información pública y organizar
-                                oportunidades comerciales.
-                            </p>
-
-                            <div class="project-tags">
-                                <span>Python</span>
-                                <span>Playwright</span>
-                                <span>Automation</span>
-                            </div>
-
-                        </div>
-
-                    </article>
-
-
-                    <article class="project-card">
-
-                        <div class="project-content">
-
-                            <span class="project-label">
-                                Gestión
-                            </span>
-
-                            <h3>
-                                Sistema de Gestión de Agua
-                            </h3>
-
-                            <p>
-                                Aplicación desarrollada para gestionar
-                                información, operaciones y procesos de una
-                                organización de servicios.
-                            </p>
-
-                            <div class="project-tags">
-                                <span>Python</span>
-                                <span>Database</span>
-                                <span>Web</span>
-                            </div>
-
-                        </div>
-
-                    </article>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- TECHNOLOGY -->
-        <section class="section technology">
-
-            <div class="container">
-
-                <div class="section-heading">
-
-                    <span class="eyebrow">
-                        Tecnología
-                    </span>
-
-                    <h2>
-                        Una base técnica preparada
-                        para crecer.
-                    </h2>
-
-                </div>
-
-
-                <div class="tech-list">
-
-                    <span>Python</span>
-                    <span>FastAPI</span>
-                    <span>Flask</span>
-                    <span>PostgreSQL</span>
-                    <span>SQLAlchemy</span>
-                    <span>Redis</span>
-                    <span>Docker</span>
-                    <span>REST APIs</span>
-                    <span>JavaScript</span>
-                    <span>Git</span>
-                    <span>Linux</span>
-                    <span>AI / LLM</span>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- ABOUT -->
-        <section class="section about" id="about">
-
-            <div class="container about-content">
-
-                <div>
-
-                    <span class="eyebrow">
-                        Sobre FlowBit
-                    </span>
-
-                    <h2>
-                        Ingeniería de software
-                        enfocada en resultados.
-                    </h2>
-
-                </div>
-
-                <div>
-
-                    <p>
-                        FlowBit nace de una idea sencilla: la tecnología
-                        debería ayudar a los negocios a trabajar mejor,
-                        no hacerlos más complicados.
-                    </p>
-
-                    <p>
-                        Construimos soluciones digitales con una base sólida
-                        de ingeniería de software, backend, automatización,
-                        datos e inteligencia artificial.
-                    </p>
-
-                    <p>
-                        Trabajamos especialmente con negocios que necesitan
-                        digitalizar procesos pero no quieren soluciones
-                        genéricas que no entienden su realidad.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- FINAL CTA -->
-        <section class="section final-cta">
-
-            <div class="container">
-
-                <div class="cta-box">
-
-                    <span class="eyebrow">
-                        ¿Tienes un proceso que mejorar?
-                    </span>
-
-                    <h2>
-                        Cuéntanos qué está frenando
-                        a tu negocio.
-                    </h2>
-
-                    <p>
-                        Cuéntanos qué haces actualmente y qué te gustaría
-                        mejorar. Exploramos juntos si podemos construir una
-                        solución.
-                    </p>
-
-                    <a
-                        href="https://wa.me/593998931349?text=Hola%20FlowBit,%20quiero%20contarles%20sobre%20un%20proyecto"
-                        class="btn-primary"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Hablemos por WhatsApp
-                    </a>
-
-                </div>
-
-            </div>
-
-        </section>
-
+                <a href="proyectos/adaptive-brain.html" class="project-link">
+                  Ver caso de estudio →
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- TECHNOLOGY -->
+      <section class="section technology">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow"> Tecnología </span>
+
+            <h2>Una base técnica preparada para crecer.</h2>
+          </div>
+
+          <div class="tech-list">
+            <span>Python</span>
+            <span>FastAPI</span>
+            <span>Flask</span>
+            <span>PostgreSQL</span>
+            <span>SQLAlchemy</span>
+            <span>Redis</span>
+            <span>Docker</span>
+            <span>REST APIs</span>
+            <span>JavaScript</span>
+            <span>Git</span>
+            <span>Linux</span>
+            <span>AI / LLM</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section class="section about" id="about">
+        <div class="container about-content">
+          <div>
+            <span class="eyebrow"> Sobre FlowBit </span>
+
+            <h2>Ingeniería de software enfocada en resultados.</h2>
+          </div>
+
+          <div>
+            <p>
+              FlowBit nace de una idea sencilla: la tecnología debería ayudar a
+              los negocios a trabajar mejor, no hacerlos más complicados.
+            </p>
+
+            <p>
+              Construimos soluciones digitales con una base sólida de ingeniería
+              de software, backend, automatización, datos e inteligencia
+              artificial.
+            </p>
+
+            <p>
+              Trabajamos especialmente con negocios que necesitan digitalizar
+              procesos pero no quieren soluciones genéricas que no entienden su
+              realidad.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- FINAL CTA -->
+      <section class="section final-cta">
+        <div class="container">
+          <div class="cta-box">
+            <span class="eyebrow"> ¿Tienes un proceso que mejorar? </span>
+
+            <h2>Cuéntanos qué está frenando a tu negocio.</h2>
+
+            <p>
+              Cuéntanos qué haces actualmente y qué te gustaría mejorar.
+              Exploramos juntos si podemos construir una solución.
+            </p>
+
+            <a
+              href="https://wa.me/593998931349?text=Hola%20FlowBit,%20quiero%20contarles%20sobre%20un%20proyecto"
+              class="btn-primary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Hablemos por WhatsApp
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
-
 
     <!-- FOOTER -->
     <footer class="footer">
-
-        <div class="container footer-content">
-
-            <div>
-                <strong>FlowBit</strong>
-                <p>
-                    Sistemas inteligentes que automatizan tu negocio.
-                </p>
-            </div>
-
-            <div class="footer-links">
-
-                <a href="https://github.com/wilmersiguencia" target="_blank" rel="noopener noreferrer">
-                    GitHub
-                </a>
-
-                <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
-                    LinkedIn
-                </a>
-
-                <a
-                    href="https://wa.me/593998931349"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    WhatsApp
-                </a>
-
-            </div>
-
+      <div class="container footer-content">
+        <div>
+          <strong>FlowBit</strong>
+          <p>Sistemas inteligentes que automatizan tu negocio.</p>
         </div>
 
+        <div class="footer-links">
+          <a
+            href="https://github.com/wilmersiguencia"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+
+          <a
+            href="https://www.linkedin.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
+
+          <a
+            href="https://wa.me/593998931349"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            WhatsApp
+          </a>
+        </div>
+      </div>
     </footer>
 
-
     <script src="js/main.js"></script>
-
-</body>
+  </body>
 </html>

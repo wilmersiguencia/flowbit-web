@@ -59,3 +59,20 @@ window.addEventListener('DOMContentLoaded', () => {
 
     reveal();
 })
+
+// Dropdown de Soluciones
+const dropdownToggle = document.querySelector('.nav-dropdown-toggle');
+const dropdown = document.querySelector('.nav-dropdown');
+
+if (dropdownToggle && dropdown) {
+    dropdownToggle.addEventListener('click', (event) => {
+        event.stopPropagation();
+        dropdown.classList.toggle('is-open');
+    });
+
+    document.addEventListener('click', (event) => {
+        if (!dropdown.contains(event.target)) {
+            dropdown.classList.remove('is-open');
+        }
+    });
+}
