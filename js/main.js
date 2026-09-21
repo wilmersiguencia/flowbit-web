@@ -76,3 +76,22 @@ if (dropdownToggle && dropdown) {
         }
     });
 }
+
+const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+if (mobileMenuToggle && navLinks) {
+    mobileMenuToggle.addEventListener('click', (event) => {
+        event.stopPropagation();
+        navLinks.classList.toggle('mobile-menu-open');
+    });
+
+    document.addEventListener('click', (event) => {
+        if (
+            !navLinks.contains(event.target) &&
+            !mobileMenuToggle.contains(event.target)
+        ) {
+            navLinks.classList.remove('mobile-menu-open');
+        }
+    });
+}
