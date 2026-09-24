@@ -1,97 +1,114 @@
-import translations from './translations.js';
+import translations from "./translations.js";
 
-const langButton = document.getElementById('lang-switch');
-const themeToggle = document.getElementById('theme-toggle');
+const langButton = document.getElementById("lang-switch");
+const themeToggle = document.getElementById("theme-toggle");
 const body = document.body;
 
-//cargamos el idioma guardado pro defecto 
-let currentLang = localStorage.getItem('preferredLang') || 'en';
+//cargamos el idioma guardado pro defecto
+const getInitialLanguage = () => {
+  const savedLang = localStorage.getItem("preferredLang");
+
+  if (savedLang === "es" || savedLang === "en") {
+    return savedLang;
+  }
+
+  const browserLang = navigator.language?.toLowerCase() || "";
+
+  return browserLang.startsWith("es") ? "es" : "en";
+};
+
+let currentLang = getInitialLanguage();
 
 const applyTranslations = (lang) => {
-    document.querySelectorAll('[data-i18n]').forEach(element => {
-        const key = element.getAttribute('data-i18n');
-        if (translations[lang] && translations[lang][key]) {
-            element.innerHTML = translations[lang][key];
-        }
-    });
-    localStorage.setItem('preferredLang', lang);
+  document.querySelectorAll("[data-i18n]").forEach((element) => {
+    const key = element.getAttribute("data-i18n");
+    if (translations[lang] && translations[lang][key]) {
+      element.innerHTML = translations[lang][key];
+    }
+  });
+  localStorage.setItem("preferredLang", lang);
+  if (langButton) {
+    langButton.textContent = lang === "es" ? "EN" : "ES";
+  }
 };
 
 if (langButton) {
-    langButton.addEventListener('click', () => {
-        currentLang = currentLang === 'es' ? 'en' : 'es';
-        applyTranslations(currentLang);
-    });
+  langButton.addEventListener("click", () => {
+    currentLang = currentLang === "es" ? "en" : "es";
+    applyTranslations(currentLang);
+  });
 }
 
 if (themeToggle) {
-    themeToggle.addEventListener('click', () => {
-        const currentTheme = body.getAttribute('data-theme');
-        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-    
-        body.setAttribute('data-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
-    });
+  themeToggle.addEventListener("click", () => {
+    const currentTheme = body.getAttribute("data-theme");
+    const newTheme = currentTheme === "light" ? "dark" : "light";
+
+    body.setAttribute("data-theme", newTheme);
+    localStorage.setItem("theme", newTheme);
+  });
 }
 
 // Función para animar al hacer scroll
 const reveal = () => {
-    const elements = document.querySelectorAll(".reveal");
+  const elements = document.querySelectorAll(".reveal");
 
-    elements.forEach(window_el => {
-        const elementTop = window_el.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
-        
-        if (elementTop < windowHeight - 100 && !window_el.classList.contains("active")) {
-            window_el.classList.add("active");
-        }
-    });
+  elements.forEach((window_el) => {
+    const elementTop = window_el.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+
+    if (
+      elementTop < windowHeight - 100 &&
+      !window_el.classList.contains("active")
+    ) {
+      window_el.classList.add("active");
+    }
+  });
 };
 
 window.addEventListener("scroll", reveal);
 
-window.addEventListener('DOMContentLoaded', () => {
+window.addEventListener("DOMContentLoaded", () => {
+  applyTranslations(currentLang);
 
-    applyTranslations(currentLang);
+  const savedTheme = localStorage.getItem("theme") || "light";
+  body.setAttribute("data-theme", savedTheme);
 
-    const savedTheme = localStorage.getItem('theme') || 'light';
-    body.setAttribute('data-theme', savedTheme);
-
-    reveal();
-})
+  reveal();
+});
 
 // Dropdown de Soluciones
-const dropdownToggle = document.querySelector('.nav-dropdown-toggle');
-const dropdown = document.querySelector('.nav-dropdown');
+const dropdownToggle = document.querySelector(".nav-dropdown-toggle");
+const dropdown = document.querySelector(".nav-dropdown");
 
 if (dropdownToggle && dropdown) {
-    dropdownToggle.addEventListener('click', (event) => {
-        event.stopPropagation();
-        dropdown.classList.toggle('is-open');
-    });
+  dropdownToggle.addEventListener("click", (event) => {
+    event.stopPropagation();
+    dropdown.classList.toggle("is-open");
+  });
 
-    document.addEventListener('click', (event) => {
-        if (!dropdown.contains(event.target)) {
-            dropdown.classList.remove('is-open');
-        }
-    });
+  document.addEventListener("click", (event) => {
+    if (!dropdown.contains(event.target)) {
+      dropdown.classList.remove("is-open");
+    }
+  });
 }
 
-const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-const navLinks = document.querySelector('.nav-links');
+const mobileMenuToggle = document.querySelector(".mobile-menu-toggle");
+const navLinks = document.querySelector(".nav-links");
 
 if (mobileMenuToggle && navLinks) {
-    mobileMenuToggle.addEventListener('click', (event) => {
-        event.stopPropagation();
-        navLinks.classList.toggle('mobile-menu-open');
-    });
+  mobileMenuToggle.addEventListener("click", (event) => {
+    event.stopPropagation();
+    navLinks.classList.toggle("mobile-menu-open");
+  });
 
-    document.addEventListener('click', (event) => {
-        if (
-            !navLinks.contains(event.target) &&
-            !mobileMenuToggle.contains(event.target)
-        ) {
-            navLinks.classList.remove('mobile-menu-open');
-        }
-    });
+  document.addEventListener("click", (event) => {
+    if (
+      !navLinks.contains(event.target) &&
+      !mobileMenuToggle.contains(event.target)
+    ) {
+      navLinks.classList.remove("mobile-menu-open");
+    }
+  });
 }
